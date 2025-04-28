@@ -1,6 +1,8 @@
 Microsoft Graph Email Service
 A FastAPI-based service that integrates with Microsoft Graph API to send and retrieve emails, storing them in MongoDB.
-Features
+
+
+### Features
 
 Send Emails: Send emails via Microsoft Graph API
 Retrieve Emails: Automatically fetch emails from Microsoft Graph API and store in MongoDB
