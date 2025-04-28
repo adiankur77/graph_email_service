@@ -117,3 +117,10 @@ params = {"hours_ago": 24, "force_refresh": True}
 
 response = requests.get(url, params=params)
 print(f"Retrieved {len(response.json()['emails'])} emails")
+
+
+## Use of AI
+1. AI was used for generating the structure of the code for FAST API python framework.
+2. AI was used to learn more about Microsoft Authentication Library.
+3. AI was used to learn more about Microsoft Graph API and what parameters to use.
+4. AI was used to setup app and app permissions in Entra Microsoft ID.
