@@ -18,47 +18,9 @@ APScheduler: Advanced Python scheduler for periodic tasks
 MSAL: Microsoft Authentication Library for OAuth2 authentication
 Pydantic: Data validation and settings management
 Uvicorn: ASGI server implementation
+            
 
-Project Structure
-graph_email_service/
-│
-├── app/                           # Main application package
-│   ├── __init__.py
-│   ├── main.py                    # FastAPI application entry point
-│   ├── config.py                  # Configuration settings
-│   ├── database.py                # MongoDB connection
-│   │
-│   ├── api/                       # API routes
-│   │   ├── __init__.py
-│   │   ├── email.py               # Email routes
-│   │   └── health.py              # Health check routes
-│   │
-│   ├── models/                    # Data models
-│   │   ├── __init__.py
-│   │   └── email.py               # Email models
-│   │
-│   ├── services/                  # Business logic
-│   │   ├── __init__.py
-│   │   ├── auth.py                # Authentication with Microsoft Graph
-│   │   ├── email_service.py       # Email service
-│   │   └── scheduler.py           # Scheduler service
-│   │
-│   ├── schemas/                   # Pydantic schemas
-│   │   ├── __init__.py
-│   │   └── email.py               # Email schemas
-│   │
-│   └── utils/                     # Utility functions
-│       ├── __init__.py
-│       └── helpers.py             # Helper functions
-│
-├── tests/                         # Test modules
-├── scripts/                       # Scripts for utility tasks
-├── .env                           # Environment variables (not in repo)
-├── .env.template                  # Environment variables template
-├── requirements.txt               # Project dependencies
-├── Dockerfile                     # Docker configuration
-├── docker-compose.yml             # Docker compose configuration
-└── README.md                      # Project documentation
+# Project documentation
 Setup
 Prerequisites
 
@@ -118,10 +80,6 @@ Main Endpoints
 POST /email/send: Send an email
 GET /email/retrieve: Retrieve emails from Microsoft Graph API
 GET /email/list: List emails from the database with filtering
-GET /email/search: Search emails by content
-GET /email/stats: Get email statistics
-GET /email/{email_id}: Get a specific email by ID
-GET /email/{email_id}/attachment/{attachment_id}: Get attachment content
 
 Testing
 Run the tests with pytest:
