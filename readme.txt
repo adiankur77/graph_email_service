@@ -10,7 +10,6 @@ Technology Stack
 
 FastAPI: Modern, high-performance web framework for building APIs
 MongoDB: NoSQL database for storing email data
-Motor: Asynchronous MongoDB driver for Python and asyncio
 APScheduler: Advanced Python scheduler for periodic tasks
 MSAL: Microsoft Authentication Library for OAuth2 authentication
 Pydantic: Data validation and settings management
