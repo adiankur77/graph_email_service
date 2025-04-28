@@ -2,12 +2,9 @@ Microsoft Graph Email Service
 A FastAPI-based service that integrates with Microsoft Graph API to send and retrieve emails, storing them in MongoDB.
 Features
 
-Send Emails: Send emails via Microsoft Graph API with support for attachments
+Send Emails: Send emails via Microsoft Graph API
 Retrieve Emails: Automatically fetch emails from Microsoft Graph API and store in MongoDB
 Scheduled Retrieval: Configurable scheduler for periodic email retrieval
-Search & Filter: Search and filter emails by various criteria
-Statistics: Get email statistics such as counts and top senders
-Attachments: Retrieve attachment metadata and content
 
 Technology Stack
 
@@ -65,7 +62,7 @@ Update the .env file with your Microsoft Graph API credentials and MongoDB setti
 
 Running the Application
 Local Development
-bashuvicorn app.main:app --reload
+bash uvicorn app.main:app --reload
 The API will be available at http://localhost:8000
 Docker
 bashdocker-compose up -d
@@ -95,7 +92,8 @@ EMAIL_RETRIEVE_BODY: Whether to retrieve full email body (default: True)
 
 Examples
 Sending an Email
-pythonimport requests
+
+import requests
 import json
 
 url = "http://localhost:8000/email/send"
@@ -119,11 +117,3 @@ params = {"hours_ago": 24, "force_refresh": True}
 
 response = requests.get(url, params=params)
 print(f"Retrieved {len(response.json()['emails'])} emails")
-Searching Emails
-pythonimport requests
-
-url = "http://localhost:8000/email/search"
-params = {"q": "important", "limit": 10}
-
-response = requests.get(url, params=params)
-print(f"Found {len(response.json()['emails'])} matching emails")
