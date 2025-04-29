@@ -117,8 +117,8 @@ headers = {"Content-Type": "application/json"}
 
 response = requests.post(url, json=payload, headers=headers)
 print(response.json())
+
 Retrieving Emails
-pythonimport requests
 
 url = "http://localhost:8000/email/retrieve"
 params = {"hours_ago": 24, "force_refresh": True}
