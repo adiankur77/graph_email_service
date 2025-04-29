@@ -231,7 +231,6 @@ class MSGraphEmailService:
                 return False, error_message
             
             # Process initial response
-            print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
             response_data = response.json()
             emails_data = response_data.get('value', [])
             next_link = response_data.get('@odata.nextLink')
