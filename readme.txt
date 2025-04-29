@@ -79,9 +79,6 @@ POST /email/send: Send an email
 GET /email/retrieve: Retrieve emails from Microsoft Graph API
 GET /email/list: List emails from the database with filtering
 
-Testing
-Run the tests with pytest:
-bashpytest
 Configuration Options
 All configuration options are set in the .env file. Key settings include:
 
@@ -90,6 +87,16 @@ EMAIL_FETCH_HOURS: How far back to look for emails (default: 24)
 EMAIL_BATCH_SIZE: Number of emails to process per batch (default: 50)
 EMAIL_RETRIEVE_ATTACHMENTS: Whether to retrieve attachment metadata (default: True)
 EMAIL_RETRIEVE_BODY: Whether to retrieve full email body (default: True)
+
+# Microsoft Graph API credentials (use environment variables to store them)
+export TENANT_ID='YOUR_TENANT_ID'
+export CLIENT_ID='YOUR_CLIENT_ID'
+export CLIENT_SECRET='YOUR_CLIENt_SECRET'
+export USER_EMAIL='YOUR_EMAIL_ID'
+
+# The redirect URI registered in your Azure app
+REDIRECT_URI=http://localhost:8000/callback
+
 
 Examples
 Sending an Email
